@@ -100,7 +100,6 @@ hilt-work = "androidx.hilt:hilt-work:1.0.0"
 hilt-common = "androidx.hilt:hilt-common:1.0.0"
 
 app-cash-turbine-turbine = "app.cash.turbine:turbine:1.0.0"
-espresso = "androidx.test.espresso:espresso-core:3.5.1"
 junit-androidx = "androidx.test.ext:junit:1.1.5"
 junit-androidx-ktx = "androidx.test.ext:junit-ktx:1.1.5"
 test-junit-ktx = "androidx.test.ext:junit-ktx:1.1.5"
@@ -117,7 +116,7 @@ ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devto
 compose = ["coil-compose", "compose-activity", "compose-compiler", "compose-material-3", "compose-materialIcons", "compose-runtimeLivedata", "compose-ui", "compose-ui-util", "compose-ui-tooling", "compose-ui-tooling-preview", "paging-compose", "compose-preview-customview", "compose-preview-customview-poolingcontainer", "compose-constraintlayout", "compose-lifecycle-runtime"]
 lifecycle = ["lifecycle-livedataKtx", "lifecycle-runtimeKtx", "lifecycle-viewmodel-compose"]
 room = ["room-ktx", "room-paging", "room-runtime"]
-ktor = ["ktor-core", "ktor-android", "ktor-json", "ktor-content-negotiation"]
+ktor = ["ktor-core", "ktor-android", "ktor-json", "ktor-content-negotiation", "ktor-auth", "ktor-logging", "ktor-okhttp"]
 firebase = ["firebase-messaging", "firebase-crashlytics", "firebase-analytics", "firebase-performance", "firebase-remote-config", "firebase-common"]
 test = ["junit4", "test-junit-ktx"]
 

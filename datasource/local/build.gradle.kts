@@ -23,16 +23,6 @@ plugins {
 android {
     namespace = "ke.droidcon.kotlin.datasource.local"
 
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-        }
-    }
-
-    buildFeatures {
-        buildConfig = true
-    }
-
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
     }
@@ -48,8 +38,6 @@ dependencies {
     implementation(libs.lifecycle.livedataKtx)
 
     implementation(libs.work.runtime)
-    implementation(libs.hilt.work)
-    implementation(libs.hilt.common)
 
     releaseImplementation(libs.chucker.release)
     debugImplementation(libs.chucker.debug)

@@ -15,8 +15,8 @@
  */
 package com.android254.data.repos.mappers
 
-import com.android254.data.db.model.SponsorEntity
 import com.android254.domain.models.Sponsors
+import ke.droidcon.kotlin.datasource.local.model.SponsorEntity
 import ke.droidcon.kotlin.datasource.remote.sponsors.model.SponsorDTO
 
 fun SponsorDTO.toDomain() = Sponsors(

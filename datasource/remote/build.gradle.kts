@@ -23,16 +23,6 @@ plugins {
 android {
     namespace = "ke.droidcon.kotlin.datasource.remote"
 
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-        }
-    }
-
-    buildFeatures {
-        buildConfig = true
-    }
-
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
     }
@@ -42,17 +32,9 @@ dependencies {
     implementation(libs.kotlin.coroutines.datetime)
     implementation(libs.timber)
     implementation(libs.kotlin.coroutines.android)
-    implementation(libs.ktor.core)
-    implementation(libs.ktor.android)
-    implementation(libs.ktor.content.negotiation)
-    implementation(libs.ktor.json)
-    implementation(libs.ktor.auth)
-    implementation(libs.ktor.logging)
-    implementation(libs.ktor.okhttp)
+    implementation(libs.bundles.ktor)
 
     implementation(libs.work.runtime)
-    implementation(libs.hilt.work)
-    implementation(libs.hilt.common)
 
     releaseImplementation(libs.chucker.release)
     debugImplementation(libs.chucker.debug)

@@ -19,13 +19,10 @@ plugins {
 }
 
 android {
-    compileSdk = 34
+
     namespace = "ke.droidcon.kotlin.chai"
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 34
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -38,25 +35,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-        }
-    }
-
-    buildFeatures {
-        buildConfig = true
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = "11"
     }
 
     packagingOptions {
@@ -74,14 +52,11 @@ dependencies {
     implementation(libs.android.material)
     implementation(libs.lifecycle.runtimeKtx)
     implementation(libs.timber)
-    implementation(libs.android.hilt)
 
     androidTestImplementation(libs.android.test.junit4)
-    androidTestImplementation(libs.android.test.espresso)
 
     testImplementation(libs.bundles.test)
     testImplementation(libs.test.robolectric)
-    testImplementation(libs.android.test.espresso)
 }
 
 kotlin {

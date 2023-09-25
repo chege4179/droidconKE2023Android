@@ -21,16 +21,22 @@ plugins {
 
 android {
     namespace = "ke.droidcon.kotlin"
-    compileSdk = 34
 
     defaultConfig {
         applicationId = "ke.droidcon.kotlin"
-        minSdk = 21
-        targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("../keystore/dckedebug.keystore")
+            keyAlias = "dcke"
+            keyPassword = "droidconkenya"
+            storePassword = "droidconkenya"
+        }
     }
 
     buildTypes {
@@ -40,6 +46,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            isDebuggable = true
+            signingConfig = signingConfigs.getByName("debug")
+        }
+        named("debug") {
+
         }
     }
 
@@ -70,11 +83,8 @@ dependencies {
     implementation(libs.timber)
 
     implementation(libs.work.runtime)
-    implementation(libs.hilt.work)
-    implementation(libs.hilt.common)
 
     androidTestImplementation(libs.android.test.junit4)
-    androidTestImplementation(libs.android.test.espresso)
 
     testImplementation(libs.bundles.test)
 

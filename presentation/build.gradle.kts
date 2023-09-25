@@ -28,18 +28,8 @@ android {
         }
     }
 
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-        }
-    }
-
     kotlinOptions {
         freeCompilerArgs + "-Xjvm-default=all"
-    }
-
-    buildFeatures {
-        buildConfig = true
     }
 
     packagingOptions {
@@ -47,13 +37,6 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
             pickFirsts.add("META-INF/io.netty.versions.properties")
         }
-    }
-
-    /**
-     * Excluding the folder as it has classes from Google AOSP which don't pass most rules
-     */
-    tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
-        exclude("**/com/android254/presentation/common/bottomsheet/**")
     }
 }
 
@@ -74,7 +57,6 @@ dependencies {
     implementation(libs.kotlin.coroutines.datetime)
 
     testImplementation(libs.test.robolectric)
-    testImplementation(libs.android.test.espresso)
     testImplementation(libs.test.navigation)
     testImplementation(libs.test.mockk)
 }
