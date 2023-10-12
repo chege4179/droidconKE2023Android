@@ -15,6 +15,7 @@
  */
 package com.android254.presentation.about.view
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,6 +34,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -58,12 +60,23 @@ import com.droidconke.chai.atoms.MontserratRegular
 import ke.droidcon.kotlin.presentation.R
 
 @Composable
-fun AboutScreen(
+fun AboutRoute(
     aboutViewModel: AboutViewModel = hiltViewModel(),
     navigateToFeedbackScreen: () -> Unit = {}
 ) {
-    val uiState = aboutViewModel.uiState.collectAsStateWithLifecycle().value
+    val uiState by aboutViewModel.uiState.collectAsStateWithLifecycle()
 
+    AboutScreen(
+        uiState = uiState,
+        navigateToFeedbackScreen = navigateToFeedbackScreen
+    )
+}
+
+@Composable
+private fun AboutScreen(
+    uiState: AboutScreenUiState,
+    navigateToFeedbackScreen: () -> Unit = {}
+) {
     Scaffold(
         topBar = {
             DroidconAppBarWithFeedbackButton(
@@ -83,6 +96,7 @@ fun AboutScreen(
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 }
             }
+
             is AboutScreenUiState.Error -> {
                 Box(
                     modifier = Modifier.fillMaxWidth()
@@ -93,6 +107,7 @@ fun AboutScreen(
                     )
                 }
             }
+
             is AboutScreenUiState.Success -> {
                 val teamMembers = uiState.teamMembers
                 val stakeHolderLogos = uiState.stakeHoldersLogos
@@ -225,10 +240,61 @@ fun OrganizingTeamSection(
     }
 }
 
-@Preview
+@Preview(
+    name = "Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO
+)
+@Preview(
+    name = "Dark",
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
 @Composable
 fun AboutScreenPreview() {
     DroidconKE2023Theme {
-        AboutScreen()
+        AboutScreen(
+            uiState = AboutScreenUiState.Success(
+                teamMembers = listOf(
+                    OrganizingTeamMember(
+                        name = "Member 1",
+                        desc = "Description 1",
+                        image = ""
+                    ),
+                    OrganizingTeamMember(
+                        name = "Member 2",
+                        desc = "Description 2",
+                        image = ""
+                    ),
+                    OrganizingTeamMember(
+                        name = "Member 3",
+                        desc = "Description 3",
+                        image = ""
+                    ),
+                    OrganizingTeamMember(
+                        name = "Member 4",
+                        desc = "Description 4",
+                        image = ""
+                    ),
+                    OrganizingTeamMember(
+                        name = "Member 5",
+                        desc = "Description 5",
+                        image = ""
+                    ),
+                    OrganizingTeamMember(
+                        name = "Member 6",
+                        desc = "Description 6",
+                        image = ""
+                    )
+                ),
+                stakeHoldersLogos = listOf(
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                )
+            )
+        )
     }
 }

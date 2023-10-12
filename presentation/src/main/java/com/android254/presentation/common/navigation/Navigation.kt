@@ -21,14 +21,14 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.android254.presentation.about.view.AboutScreen
-import com.android254.presentation.feed.view.FeedScreen
-import com.android254.presentation.feedback.view.FeedBackScreen
-import com.android254.presentation.home.screen.HomeScreen
-import com.android254.presentation.sessionDetails.view.SessionDetailsScreen
-import com.android254.presentation.sessions.view.SessionsScreen
-import com.android254.presentation.speakers.view.SpeakerDetailsScreen
-import com.android254.presentation.speakers.view.SpeakersScreen
+import com.android254.presentation.about.view.AboutRoute
+import com.android254.presentation.feed.view.FeedRoute
+import com.android254.presentation.feedback.view.FeedBackRoute
+import com.android254.presentation.home.screen.HomeRoute
+import com.android254.presentation.sessionDetails.view.SessionDetailsRoute
+import com.android254.presentation.sessions.view.SessionsRoute
+import com.android254.presentation.speakers.view.SpeakerDetailsRoute
+import com.android254.presentation.speakers.view.SpeakersRoute
 
 @Composable
 fun Navigation(
@@ -39,11 +39,14 @@ fun Navigation(
     NavHost(navController, startDestination = Screens.Home.route) {
         composable(Screens.Home.route) {
             updateBottomBarState(true)
-            HomeScreen(
+            HomeRoute(
                 navigateToSpeakers = { navController.navigate(Screens.Speakers.route) },
-                navigateToSpeaker = { twitterHandle ->
+                navigateToSpeaker = { speakerId ->
                     navController.navigate(
-                        Screens.SpeakerDetails.route.replace("{twitterHandle}", twitterHandle)
+                        Screens.SpeakerDetails.route.replace(
+                            "{speakerId}",
+                            speakerId
+                        )
                     )
                 },
                 navigateToFeedbackScreen = { navController.navigate(Screens.FeedBack.route) },
@@ -54,7 +57,8 @@ fun Navigation(
         }
         composable(Screens.Sessions.route) {
             updateBottomBarState(true)
-            SessionsScreen(navigateToSessionDetails = { sessionId ->
+            SessionsRoute(navigateToSessionDetails = { sessionId ->
+
                 navController.navigate(
                     Screens.SessionDetails.route.replace(
                         oldValue = "{sessionId}",
@@ -68,10 +72,14 @@ fun Navigation(
         }
         composable(
             Screens.SessionDetails.route,
-            arguments = listOf(navArgument(Screens.SessionDetails.sessionIdNavigationArgument) { type = NavType.StringType })
+            arguments = listOf(
+                navArgument(Screens.SessionDetails.sessionIdNavigationArgument) {
+                    type = NavType.StringType
+                }
+            )
         ) { backStackEntry ->
             updateBottomBarState(false)
-            SessionDetailsScreen(
+            SessionDetailsRoute(
                 sessionId = requireNotNull(backStackEntry.arguments?.getString(Screens.SessionDetails.sessionIdNavigationArgument)),
                 onNavigationIconClick = {
                     navController.popBackStack()
@@ -80,28 +88,33 @@ fun Navigation(
         }
         composable(Screens.Feed.route) {
             updateBottomBarState(true)
-            FeedScreen(
+            FeedRoute(
                 navigateToFeedbackScreen = { navController.navigate(Screens.FeedBack.route) }
             )
         }
         composable(Screens.About.route) {
             updateBottomBarState(true)
-            AboutScreen(
+            AboutRoute(
                 navigateToFeedbackScreen = { navController.navigate(Screens.FeedBack.route) }
             )
         }
         composable(Screens.Speakers.route) {
             updateBottomBarState(true)
-            SpeakersScreen(
+            SpeakersRoute(
                 navigateToHomeScreen = { navController.navigateUp() },
                 navigateToSpeaker = { speakerId ->
-                    navController.navigate(Screens.SpeakerDetails.route.replace("{speakerId}", "$speakerId"))
+                    navController.navigate(
+                        Screens.SpeakerDetails.route.replace(
+                            "{speakerId}",
+                            "$speakerId"
+                        )
+                    )
                 }
             )
         }
         composable(Screens.FeedBack.route) {
             updateBottomBarState(false)
-            FeedBackScreen(
+            FeedBackRoute(
                 navigateBack = { navController.navigateUp() }
             )
         }
@@ -113,7 +126,7 @@ fun Navigation(
             val speakerId = it.arguments?.getInt("speakerId")
                 ?: throw IllegalStateException("Speaker data missing.")
             updateBottomBarState(false)
-            SpeakerDetailsScreen(
+            SpeakerDetailsRoute(
                 id = speakerId,
                 navigateBack = { navController.navigateUp() }
             )

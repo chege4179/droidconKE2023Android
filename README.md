@@ -131,6 +131,17 @@ androidx-splashscreen = { module = "androidx.core:core-splashscreen", version.re
 - Define variables using **CamelCase**.\
 - Check if the library can be added to any existing bundles.
 
+## Compose Preview and ViewModel
+
+Previews are limited when using ViewModel within a composable.
+
+If you want to preview a composable that uses a ViewModel, you should create another composable with
+the parameters from ViewModel passed as arguments of the composable. This way, you don't need to
+preview the composable that uses the ViewModel.
+
+More on Previews and ViewModels can be
+found [here](https://developer.android.com/jetpack/compose/tooling/previews#preview-viewmodel).
+
 ## Compatibility
 
 This project uses `coreLibraryDesugaring` to support newer Java 8 APIs that are not available on API
@@ -171,6 +182,13 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/yveskalume">
+            <img src="https://avatars.githubusercontent.com/u/55670723?v=4" width="100;" alt="yveskalume"/>
+            <br />
+            <sub><b>Yves Kalume</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/wangerekaharun">
             <img src="https://avatars.githubusercontent.com/u/15122455?v=4" width="100;" alt="wangerekaharun"/>
             <br />
@@ -190,15 +208,15 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Peter Chege</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/robert-nganga">
             <img src="https://avatars.githubusercontent.com/u/52964743?v=4" width="100;" alt="robert-nganga"/>
             <br />
             <sub><b>Robert Nganga</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/KennethMathari">
             <img src="https://avatars.githubusercontent.com/u/27956755?v=4" width="100;" alt="KennethMathari"/>
@@ -233,20 +251,20 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Rachel Murabula</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/kibettheophilus">
             <img src="https://avatars.githubusercontent.com/u/61080898?v=4" width="100;" alt="kibettheophilus"/>
             <br />
             <sub><b>Kibet Theo</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
-        <a href="https://github.com/yveskalume">
-            <img src="https://avatars.githubusercontent.com/u/55670723?v=4" width="100;" alt="yveskalume"/>
+        <a href="https://github.com/paulodhiambo">
+            <img src="https://avatars.githubusercontent.com/u/44492906?v=4" width="100;" alt="paulodhiambo"/>
             <br />
-            <sub><b>Yves Kalume</b></sub>
+            <sub><b>Odhiambo Paul</b></sub>
         </a>
     </td>
     <td align="center">
@@ -276,15 +294,15 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Martin Thuo</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Njoguu">
             <img src="https://avatars.githubusercontent.com/u/60213982?v=4" width="100;" alt="Njoguu"/>
             <br />
             <sub><b>Whoisnjoguu</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/emmanuelmuturia">
             <img src="https://avatars.githubusercontent.com/u/55001497?v=4" width="100;" alt="emmanuelmuturia"/>
@@ -319,7 +337,8 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Michael Bukachi</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/joenjogu">
             <img src="https://avatars.githubusercontent.com/u/20142549?v=4" width="100;" alt="joenjogu"/>
