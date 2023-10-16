@@ -261,10 +261,24 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Jacquigee">
+            <img src="https://avatars.githubusercontent.com/u/25638707?v=4" width="100;" alt="Jacquigee"/>
+            <br />
+            <sub><b>Jacquiline Gitau</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/paulodhiambo">
             <img src="https://avatars.githubusercontent.com/u/44492906?v=4" width="100;" alt="paulodhiambo"/>
             <br />
             <sub><b>Odhiambo Paul</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kanake10">
+            <img src="https://avatars.githubusercontent.com/u/77957614?v=4" width="100;" alt="kanake10"/>
+            <br />
+            <sub><b>N3</b></sub>
         </a>
     </td>
     <td align="center">
@@ -275,32 +289,32 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Jacquigee">
-            <img src="https://avatars.githubusercontent.com/u/25638707?v=4" width="100;" alt="Jacquigee"/>
-            <br />
-            <sub><b>Jacquiline Gitau</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/joelmuraguri">
             <img src="https://avatars.githubusercontent.com/u/97348446?v=4" width="100;" alt="joelmuraguri"/>
             <br />
             <sub><b>Joel  Muraguri</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/mertoenjosh">
             <img src="https://avatars.githubusercontent.com/u/60392385?v=4" width="100;" alt="mertoenjosh"/>
             <br />
             <sub><b>Martin Thuo</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Njoguu">
             <img src="https://avatars.githubusercontent.com/u/60213982?v=4" width="100;" alt="Njoguu"/>
             <br />
             <sub><b>Whoisnjoguu</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Terry-Mochire">
+            <img src="https://avatars.githubusercontent.com/u/82908547?v=4" width="100;" alt="Terry-Mochire"/>
+            <br />
+            <sub><b>Terry Mochire</b></sub>
         </a>
     </td>
     <td align="center">
@@ -311,17 +325,32 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/jumapaul">
+            <img src="https://avatars.githubusercontent.com/u/68422810?v=4" width="100;" alt="jumapaul"/>
+            <br />
+            <sub><b>Paul Juma</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/BKinya">
             <img src="https://avatars.githubusercontent.com/u/30239692?v=4" width="100;" alt="BKinya"/>
             <br />
             <sub><b>Beatrice Kinya</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Dbriane208">
             <img src="https://avatars.githubusercontent.com/u/99172711?v=4" width="100;" alt="Dbriane208"/>
             <br />
             <sub><b>Null</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/etonotieno">
+            <img src="https://avatars.githubusercontent.com/u/25648109?v=4" width="100;" alt="etonotieno"/>
+            <br />
+            <sub><b>Eton Otieno</b></sub>
         </a>
     </td>
     <td align="center">
@@ -337,13 +366,19 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Michael Bukachi</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/joenjogu">
             <img src="https://avatars.githubusercontent.com/u/20142549?v=4" width="100;" alt="joenjogu"/>
             <br />
             <sub><b>Joenjogu</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/lokified">
+            <img src="https://avatars.githubusercontent.com/u/87479198?v=4" width="100;" alt="lokified"/>
+            <br />
+            <sub><b>Sheldon Okware</b></sub>
         </a>
     </td></tr>
 </table>
