@@ -84,8 +84,8 @@ The app will have the following features:
 ## Designs
 
 This is the link to the app designs:  
-[Light Theme] (https://xd.adobe.com/view/dd5d0245-b92b-4678-9d4a-48b3a6f48191-880e/)  
-[Dark Theme] (https://xd.adobe.com/view/5ec235b6-c3c6-49a9-b783-1f1303deb1a8-0b91/)
+- [Light Theme](https://xd.adobe.com/view/dd5d0245-b92b-4678-9d4a-48b3a6f48191-880e/)
+- [Dark Theme](https://xd.adobe.com/view/5ec235b6-c3c6-49a9-b783-1f1303deb1a8-0b91/)
 
 The app uses a design system: Chai
 
@@ -218,6 +218,13 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Raynafs">
+            <img src="https://avatars.githubusercontent.com/u/110402503?v=4" width="100;" alt="Raynafs"/>
+            <br />
+            <sub><b>Rachel Murabula</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/KennethMathari">
             <img src="https://avatars.githubusercontent.com/u/27956755?v=4" width="100;" alt="KennethMathari"/>
             <br />
@@ -244,27 +251,20 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>MamboBryan</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Raynafs">
-            <img src="https://avatars.githubusercontent.com/u/110402503?v=4" width="100;" alt="Raynafs"/>
-            <br />
-            <sub><b>Rachel Murabula</b></sub>
-        </a>
     </td></tr>
 <tr>
-    <td align="center">
-        <a href="https://github.com/kibettheophilus">
-            <img src="https://avatars.githubusercontent.com/u/61080898?v=4" width="100;" alt="kibettheophilus"/>
-            <br />
-            <sub><b>Kibet Theo</b></sub>
-        </a>
-    </td>
     <td align="center">
         <a href="https://github.com/Jacquigee">
             <img src="https://avatars.githubusercontent.com/u/25638707?v=4" width="100;" alt="Jacquigee"/>
             <br />
             <sub><b>Jacquiline Gitau</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kibettheophilus">
+            <img src="https://avatars.githubusercontent.com/u/61080898?v=4" width="100;" alt="kibettheophilus"/>
+            <br />
+            <sub><b>Kibet Theo</b></sub>
         </a>
     </td>
     <td align="center">
@@ -282,10 +282,25 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ndiritumichael">
+            <img src="https://avatars.githubusercontent.com/u/17760799?v=4" width="100;" alt="ndiritumichael"/>
+            <br />
+            <sub><b>Michael Ndiritu</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/mog-rn">
             <img src="https://avatars.githubusercontent.com/u/61131314?v=4" width="100;" alt="mog-rn"/>
             <br />
             <sub><b>Amos Nyaburi</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/etonotieno">
+            <img src="https://avatars.githubusercontent.com/u/25648109?v=4" width="100;" alt="etonotieno"/>
+            <br />
+            <sub><b>Eton Otieno</b></sub>
         </a>
     </td>
     <td align="center">
@@ -294,8 +309,7 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Joel  Muraguri</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/mertoenjosh">
             <img src="https://avatars.githubusercontent.com/u/60392385?v=4" width="100;" alt="mertoenjosh"/>
@@ -318,6 +332,14 @@ We would endlessly like to thank the following contributors
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/cliffgor">
+            <img src="https://avatars.githubusercontent.com/u/17774205?v=4" width="100;" alt="cliffgor"/>
+            <br />
+            <sub><b>Cliff Gor</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/emmanuelmuturia">
             <img src="https://avatars.githubusercontent.com/u/55001497?v=4" width="100;" alt="emmanuelmuturia"/>
             <br />
@@ -337,20 +359,12 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Beatrice Kinya</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Dbriane208">
             <img src="https://avatars.githubusercontent.com/u/99172711?v=4" width="100;" alt="Dbriane208"/>
             <br />
             <sub><b>Null</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/etonotieno">
-            <img src="https://avatars.githubusercontent.com/u/25648109?v=4" width="100;" alt="etonotieno"/>
-            <br />
-            <sub><b>Eton Otieno</b></sub>
         </a>
     </td>
     <td align="center">
@@ -366,7 +380,8 @@ We would endlessly like to thank the following contributors
             <br />
             <sub><b>Michael Bukachi</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/joenjogu">
             <img src="https://avatars.githubusercontent.com/u/20142549?v=4" width="100;" alt="joenjogu"/>
