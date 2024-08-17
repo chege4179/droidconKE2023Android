@@ -16,7 +16,9 @@
 plugins {
     alias(libs.plugins.droidconke.android.application)
     alias(libs.plugins.droidconke.android.hilt)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.droidconke.android.application.firebase)
+    alias(libs.plugins.droidconke.android.application.jacoco)
 }
 
 android {
@@ -42,7 +44,6 @@ android {
     buildTypes {
         debug {
             isDebuggable = true
-            isMinifyEnabled = true
             signingConfig = signingConfigs.getByName("debug")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -89,6 +90,4 @@ dependencies {
     androidTestImplementation(libs.android.test.junit4)
 
     testImplementation(libs.bundles.test)
-
-    coreLibraryDesugaring(libs.desugar.jdk.libs)
 }

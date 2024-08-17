@@ -19,14 +19,11 @@ plugins {
     alias(libs.plugins.droidconke.android.hilt)
     alias(libs.plugins.droidconke.android.library.firebase)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.droidconke.android.library.jacoco)
 }
 
 android {
     namespace = "ke.droidcon.kotlin.datasource.remote"
-
-    compileOptions {
-        isCoreLibraryDesugaringEnabled = true
-    }
 }
 
 dependencies {

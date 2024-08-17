@@ -17,7 +17,6 @@ package com.android254.data.repos
 
 import com.android254.data.repos.mappers.toDomainModel
 import com.android254.data.repos.mappers.toEntity
-import com.android254.domain.models.ResourceResult
 import com.android254.domain.models.Speaker
 import com.android254.domain.repos.SpeakersRepo
 import javax.inject.Inject
@@ -38,7 +37,7 @@ class SpeakersManager @Inject constructor(
 
     override suspend fun fetchSpeakerCount(): Flow<Int> = localSpeakersDataSource.fetchCachedSpeakerCount()
 
-    override suspend fun getSpeakerByName(name: String): ResourceResult<Speaker> = ResourceResult.Success(localSpeakersDataSource.getCachedSpeakerByName(name)?.toDomainModel())
+    override suspend fun getSpeakerByName(name: String): Flow<Speaker> = localSpeakersDataSource.getCachedSpeakerByName(name).map { it.toDomainModel() }
 
     override suspend fun syncSpeakers() {
         when (val response = remoteSpeakersDataSource.getAllSpeakersRemote()) {

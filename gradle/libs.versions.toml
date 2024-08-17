@@ -1,14 +1,16 @@
 [versions]
+android-compile-sdk = "34"
+android-min-sdk = "24"
 composecompiler = "1.5.3"
 coroutines = "1.7.3"
 coroutines_datetime = "0.4.0"
 desugar_jdk_libs = "2.0.3"
 espresso = "3.5.1"
-gradleplugin = "8.1.2"
+gradleplugin = "8.4.0"
 gmsPlugin = "4.4.0"
 hilt = "2.48.1"
-kotlin = "1.9.10"
-ksp = "1.9.10-1.0.13"
+kotlin = "2.0.0"
+ksp = "2.0.0-1.0.21"
 lifecycle = "2.6.2"
 room = "2.6.0"
 ktor = "2.2.2"
@@ -156,6 +158,7 @@ test = ["junit4", "test-junit-ktx"]
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradleplugin" }
 android-library = { id = "com.android.library", version.ref = "gradleplugin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin"}
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
 firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerfPlugin" }
@@ -163,11 +166,12 @@ gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 jlleitschuh = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-spotless =  { id = "com.diffplug.spotless", version.ref = "spotless" }
-toml-checker = { id = "com.github.ben-manes.versions", version.ref = "toml_checker"}
-toml-updater = { id = "nl.littlerobots.version-catalog-update", version.ref = "toml_updater"}
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+toml-checker = { id = "com.github.ben-manes.versions", version.ref = "toml_checker" }
+toml-updater = { id = "nl.littlerobots.version-catalog-update", version.ref = "toml_updater" }
 
 # Convention plugins defined in the project
 droidconke-android-library = { id = "droidconke.android.library", version = "unspecified" }
@@ -178,3 +182,6 @@ droidconke-android-application-firebase = { id = "droidconke.android.application
 droidconke-android-library-firebase = { id = "droidconke.android.library.firebase", version = "unspecified" }
 droidconke-android-application = { id = "droidconke.android.application", version = "unspecified" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+droidconke-android-application-jacoco = { id = "droidconke.android.application.jacoco", version = "unspecified" }
+droidconke-android-library-jacoco = { id = "droidconke.android.library.jacoco", version = "unspecified" }
+droidconke-multiplatform = { id = "droidconke.multiplatform", version = "unspecified" }

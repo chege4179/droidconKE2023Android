@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 DroidconKE
+ * Copyright 2024 DroidconKE
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,27 @@
  * limitations under the License.
  */
 plugins {
-    alias(libs.plugins.droidconke.android.library)
-    alias(libs.plugins.droidconke.android.library.jacoco)
+    alias(libs.plugins.droidconke.multiplatform)
+}
+
+kotlin {
+
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                api(project(":shared:datasource"))
+                api(project(":shared:data"))
+                api(project(":shared:domain"))
+            }
+        }
+        val commonTest by getting {
+            dependencies {
+                // implementation(libs.kotlin.test)
+            }
+        }
+    }
 }
 
 android {
-    namespace = "ke.droidcon.kotlin.domain"
-}
-
-dependencies {
-    implementation(libs.kotlinx.coroutines.core)
+    namespace = "ke.droidcon.kotlin.shared"
 }

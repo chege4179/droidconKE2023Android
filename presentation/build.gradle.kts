@@ -16,7 +16,9 @@
 plugins {
     alias(libs.plugins.droidconke.android.library)
     alias(libs.plugins.droidconke.android.hilt)
+    alias(notation = libs.plugins.compose.compiler)
     alias(libs.plugins.droidconke.android.library.compose)
+    alias(libs.plugins.droidconke.android.library.jacoco)
 }
 
 android {
@@ -44,6 +46,8 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":chai"))
     implementation(project(":datasource:remote"))
+
+    implementation(project(":shared"))
 
     implementation(libs.android.appCompat)
     implementation(libs.android.material)

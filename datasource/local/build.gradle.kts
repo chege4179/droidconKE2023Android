@@ -18,14 +18,11 @@ plugins {
     alias(libs.plugins.droidconke.android.room)
     alias(libs.plugins.droidconke.android.hilt)
     alias(libs.plugins.droidconke.android.library.firebase)
+    alias(libs.plugins.droidconke.android.library.jacoco)
 }
 
 android {
     namespace = "ke.droidcon.kotlin.datasource.local"
-
-    compileOptions {
-        isCoreLibraryDesugaringEnabled = true
-    }
 }
 
 dependencies {
@@ -34,7 +31,6 @@ dependencies {
     implementation(libs.datastore)
     implementation(libs.kotlin.coroutines.android)
 
-    coreLibraryDesugaring(libs.desugar.jdk.libs)
     implementation(libs.lifecycle.livedataKtx)
 
     implementation(libs.work.runtime)

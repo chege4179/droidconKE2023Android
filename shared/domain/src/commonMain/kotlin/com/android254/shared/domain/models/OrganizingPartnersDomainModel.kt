@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 DroidconKE
+ * Copyright 2024 DroidconKE
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-plugins {
-    alias(libs.plugins.droidconke.android.library)
-    alias(libs.plugins.droidconke.android.library.jacoco)
-}
+package com.android254.shared.domain.models
 
-android {
-    namespace = "ke.droidcon.kotlin.domain"
-}
+data class OrganizingPartnersDomainModel(
+    val organizerName: String,
+    val organizerLogoUrl: String
+)
 
-dependencies {
-    implementation(libs.kotlinx.coroutines.core)
-}
+data class SponsorsDomainModel(
+    val sponsorName: String,
+    val sponsorLogoUrl: String,
+    val link: String,
+    val sponsorType: String,
+    val createdAt: String
+)
